@@ -922,7 +922,7 @@
         el.startAuto();
 
         //add focus and blur events to ensure its running if timeout gets paused
-        $(window).focus(windowFocusHandler).blur(windowBlurHandler);
+        $(window).on("focus", windowFocusHandler).on("blur", windowBlurHandler);
       }
       // if autoHover is requested
       if (slider.settings.autoHover) {
